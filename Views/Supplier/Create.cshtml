@@ -1,0 +1,48 @@
+﻿@model PRNAssigment.Models.Supplier
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Add more Products</h3>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post" action="/Product/Create">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label asp-for="SupplierID" class="control-label"></label>
+                            <input asp-for="SupplierID" class="form-control" />
+                            <span asp-validation-for="SupplierID" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label asp-for="SupplierName" class="control-label"></label>
+                            <input asp-for="SupplierName" class="form-control" />
+                            <span asp-validation-for="SupplierName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </body>
+</html>
